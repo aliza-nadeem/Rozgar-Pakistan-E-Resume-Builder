@@ -28,14 +28,14 @@ app.use(express.json());
 // ============================================================================
 
 const dbConfig = {
-    user: 'sa',                     // Change to your SQL username
-    password: '123',                // Change to your SQL password
-    server: 'localhost',            // Change if using different server
-    // server: 'localhost\\SQLEXPRESS', // Uncomment for SQL Express
+    user: 'sa',
+    password: '123',
+    server: 'localhost',
+    port: 1433,
     database: 'RozgarDB',
     options: {
-        encrypt: true,
-        trustServerCertificate: true  // Required for local development
+        encrypt: false,
+        trustServerCertificate: true
     },
     pool: {
         max: 10,
